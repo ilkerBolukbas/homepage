@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form Demo</title>
+  </head>
+
+  <body>
+    <h1>Form Demo</h1>
+    <form action="/food">
+      <div>
+        <label for="userName">Kullanıcı adı:</label>
+        <input
+          type="text"
+          placeholder="Kulalnıcı Adı"
+          id="userName"
+          name="userName"
+        />
+      </div>
+      <div>
+        <label for="kulSifre">Şifre:</label>
+        <input
+          type="password"
+          placeholder="Şifre"
+          id="kulSifre"
+          name="kulSifre"
+        />
+      </div>
+      <div>
+        <label for="color">Renk Seçiniz:</label>
+        <input type="color" id="color" name="color" />
+      </div>
+      <div>
+        <label for="sayi">Sayı Seçiniz:</label>
+        <input type="number" id="sayi" />
+      </div>
+      <div>
+        <button type="submit">Gönder</button>
+      </div>
+      <div>
+        <input type="submit" value="Tıklayın" />
+      </div>
+    </form>
+    <form action="https://www.reddit.com/search">
+      <div>
+        <label for="reddit">Reddit arama</label>
+        <input type="text" id="reddit" name="q" />
+        <button>Redit</button>
+      </div>
+    </form>
+    <form action="https://www.google.com/search">
+      <div>
+        <label for="google">Google'de Ara:</label>
+        <input type="text" id="google" name="q" />
+        <button>Google Ara</button>
+      </div>
+    </form>
+    <form action="https://www.youtube.com/results">
+      <div>
+        <label for="youtube">Youtube'de Ara</label>
+        <input type="text" id="youtube" name="search_query" />
+        <button>Youtube'de Ara</button>
+      </div>
+    </form>
+    <div>
+      <button>Form Dışı</button>
+    </div>
+    <h2>Daha Fazla İnput</h2>
+    <form action="/birds">
+      <div>
+        <input type="checkbox" name="tos" id="agree" checked />
+        <label for="agree">Kabul Ediyorum</label>
+      </div>
+      <div>
+        <label for="xs">XS:</label>
+        <input type="radio" name="size" id="xs" value="xs" />
+        <label for="s">S:</label>
+        <input type="radio" name="size" id="s" value="s" />
+        <label for="m">M:</label>
+        <input type="radio" name="size" id="m" value="m" />
+      </div>
+      <div>
+        <label for="animal">Favori hayvanınızı seçiniz</label>
+        <select name="animal" id="animal">
+          <option value="fish">balık</option>
+          <option value="cat" selected>kedi</option>
+          <option value="dog">köpek</option>
+        </select>
+      </div>
+      <div>
+        <label for="cheese">Peynir Miktarı:</label>
+        <input
+          type="range"
+          name="cheese"
+          id="cheese"
+          value="0"
+          min="0"
+          max="100"
+          step="7"
+        />
+      </div>
+      <div>
+        <input type="number" name="" id="" min="0" max="5" value="0" />
+      </div>
+      <div>
+        <label for="idea">Görüşleriniz:</label><br>
+        <textarea name="idea" id="idea" cols="30" rows="10">Görüşleriniz önemli</textarea>
+      </div>
+      <button>Yolla</button>
+      <h2>Validations</h2>
+      <form action="/spare">
+        <label for="first">İsim Giriniz:</label>
+        <input type="text" name="first" id="first" minlength="5" maxlength="25" required>
+        <button>submit</button>
+      </form>
+    </form>
+  </body>
+</html>
+<!-- http://127.0.0.1:5500/birds?tos=on&animal=cat&cheese=18 -->
+<!-- http://127.0.0.1:5500/birds?tos=on&animal=fish -->
+<!-- http://127.0.0.1:5500/food?userName=ilker -->
+<!-- http://127.0.0.1:5500/food?userName=ilker&kulSifre=deneme&color=%2300ffee -->
+<!-- http://127.0.0.1:5500/birds?tos=on&size=on -->
+<!-- http://127.0.0.1:5500/birds?tos=on&size=m -->
